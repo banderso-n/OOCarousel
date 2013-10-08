@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <title>OOCarousel - Test</title>
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="screen.css" />
+
+    <script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="lib/OOCarousel.js"></script>
+    <script type="text/javascript">
+
+
+$(function () {
+    'use strict';
+
+    var carousel = new OOCarousel(document.getElementById('js-carousel'));
+
+    carousel.start().set({ fx: OOCarousel.FX.FADE });
+
+    $('.js-carousel-control').on('click', function (e) {
+        var $target = $(e.currentTarget);
+        var method = $target.data('carousel-method');
+        var args = $target.data('carousel-arguments');
+        carousel[method].apply(carousel, args);
+    });
+});
+    </script>
+</head>
+<body>
+
+    <div class="wrap mix-isFullHeight">
+        <div class="container">
+
+            <ul class="carousel" id="js-carousel">
+                <li class="carousel-item js-oocarousel-item" style="background: #cc5555">one</li>
+                <li class="carousel-item js-oocarousel-item" style="background: #55cc55">two</li>
+                <li class="carousel-item js-oocarousel-item" style="background: #5555cc">three</li>
+                <li class="carousel-item js-oocarousel-item" style="background: #cccc55">four</li>
+                <li class="carousel-item js-oocarousel-item" style="background: #cc55cc">five</li>
+            </ul>
+
+            <div class="vr-small">
+                <ul class="hList hList_small">
+                    <li><button class="js-carousel-control button" data-carousel-method="advance" data-carousel-arguments="[-1]">Previous</button></li>
+                    <li><button class="js-carousel-control button" data-carousel-method="advance" data-carousel-arguments="[1]">Next</button></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

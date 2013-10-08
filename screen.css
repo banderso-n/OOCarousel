@@ -1,0 +1,89 @@
+/* ---------------------------------------------------------------------
+ BASE STYLES
+------------------------------------------------------------------------ */
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #cccccc;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ---------------------------------------------------------------------
+ UTILITY STYLES
+------------------------------------------------------------------------ */
+.mix-isFullHeight {
+    height: 100%;
+}
+
+/* ---------------------------------------------------------------------
+ LAYOUT STYLES
+------------------------------------------------------------------------ */
+.wrap {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 20px;
+}
+
+.hList {
+    overflow: hidden;
+}
+
+.hList > * {
+    float: left;
+}
+
+.hList_small > * + * {
+    margin-left: 5px;
+}
+
+/* ---------------------------------------------------------------------
+ CONTENT STYLES
+------------------------------------------------------------------------ */
+.button {
+    cursor: pointer;
+    background: #cc5555;
+    border-radius: 3px;
+    border: none;
+    border-bottom: solid 3px #991111;
+    color: #ffffff;
+    text-shadow: 0 -1px #991111;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 10px;
+    -webkit-transition: margin-top 50ms ease-out, border-bottom-width 50ms ease-out;
+            transition: margin-top 50ms ease-out, border-bottom-width 50ms ease-out;
+}
+
+.button:active {
+    margin-top: 2px;
+    border-bottom-width: 1px;
+}
+
+/* ---------------------------------------------------------------------
+ CONTAINER STYLES
+------------------------------------------------------------------------ */
+.carousel {
+    height: 200px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    background: #dddddd;
+    overflow: hidden;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------------------------------------------------------------
+ VR (VERTICAL RHYTHM)
+------------------------------------------------------------------------ */
+.vr-small {
+    margin: 10px 0;
+}
