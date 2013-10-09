@@ -45,6 +45,10 @@ body {
 /* ---------------------------------------------------------------------
  CONTENT STYLES
 ------------------------------------------------------------------------ */
+
+/**
+ * A button with an active state that appears to be pressed
+ */
 .button {
     cursor: pointer;
     background: #cc5555;
@@ -63,6 +67,44 @@ body {
 .button:active {
     margin-top: 2px;
     border-bottom-width: 1px;
+}
+
+/**
+ * A full-width, full-height module with vertically-centered large text
+ */
+.slide {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.slide-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.slide_1 {
+    background: #cc5555;
+}
+
+.slide_2 {
+    background: #55cc55;
+}
+
+.slide_3 {
+    background: #5555cc;
+}
+
+.slide_4 {
+    background: #55cccc;
+}
+
+.slide_5 {
+    background: #cc55cc;
 }
 
 /* ---------------------------------------------------------------------

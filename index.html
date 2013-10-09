@@ -17,7 +17,7 @@ $(function () {
 
     var carousel = new OOCarousel(document.getElementById('js-carousel'));
 
-    carousel.start().set({ fx: OOCarousel.FX.FADE, autoAdvance: true });
+    carousel.start().set({ fx: OOCarousel.FX.SLIDE_INFINITE, autoAdvance: true });
 
     $('.js-carousel-control').on('click', function (e) {
         var $target = $(e.currentTarget);
@@ -34,11 +34,41 @@ $(function () {
         <div class="container">
 
             <ul class="carousel" id="js-carousel">
-                <li class="carousel-item js-oocarousel-item" style="background: #cc5555">one</li>
-                <li class="carousel-item js-oocarousel-item" style="background: #55cc55">two</li>
-                <li class="carousel-item js-oocarousel-item" style="background: #5555cc">three</li>
-                <li class="carousel-item js-oocarousel-item" style="background: #cccc55">four</li>
-                <li class="carousel-item js-oocarousel-item" style="background: #cc55cc">five</li>
+                <li class="carousel-item js-oocarousel-item">
+                    <div class="slide slide_1">
+                        <div class="slide-inner">
+                            One.
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-item js-oocarousel-item">
+                    <div class="slide slide_2">
+                        <div class="slide-inner">
+                            Two.
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-item js-oocarousel-item">
+                    <div class="slide slide_3">
+                        <div class="slide-inner">
+                            Three.
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-item js-oocarousel-item">
+                    <div class="slide slide_4">
+                        <div class="slide-inner">
+                            Four.
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-item js-oocarousel-item">
+                    <div class="slide slide_5">
+                        <div class="slide-inner">
+                            Five.
+                        </div>
+                    </div>
+                </li>
             </ul>
 
             <div class="vr-small">
