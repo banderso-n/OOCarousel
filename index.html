@@ -17,7 +17,7 @@ $(function () {
 
     var carousel = new OOCarousel(document.getElementById('js-carousel'));
 
-    carousel.start().set({ fx: OOCarousel.FX.FADE });
+    carousel.start().set({ fx: OOCarousel.FX.FADE, autoAdvance: true });
 
     $('.js-carousel-control').on('click', function (e) {
         var $target = $(e.currentTarget);
@@ -42,9 +42,14 @@ $(function () {
             </ul>
 
             <div class="vr-small">
-                <ul class="hList hList_small">
+                <ul class="blocks blocks_small">
                     <li><button class="js-carousel-control button" data-carousel-method="advance" data-carousel-arguments="[-1]">Previous</button></li>
                     <li><button class="js-carousel-control button" data-carousel-method="advance" data-carousel-arguments="[1]">Next</button></li>
+                    <li><button class="js-carousel-control button" data-carousel-method="goTo" data-carousel-arguments="[0]">First Slide</button></li>
+                    <li><button class="js-carousel-control button" data-carousel-method="goTo" data-carousel-arguments="[1]">Second Slide</button></li>
+                    <li><button class="js-carousel-control button" data-carousel-method="goTo" data-carousel-arguments="[2]">Third Slide</button></li>
+                    <li><button class="js-carousel-control button" data-carousel-method="goTo" data-carousel-arguments="[3]">Fourth Slide</button></li>
+                    <li><button class="js-carousel-control button" data-carousel-method="goTo" data-carousel-arguments="[4]">Fifth Slide</button></li>
                 </ul>
             </div>
 

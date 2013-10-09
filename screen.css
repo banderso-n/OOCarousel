@@ -31,16 +31,15 @@ body {
     padding: 20px;
 }
 
-.hList {
-    overflow: hidden;
+.blocks {
+    font-size: 0;
 }
 
-.hList > * {
-    float: left;
-}
-
-.hList_small > * + * {
-    margin-left: 5px;
+.blocks > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 /* ---------------------------------------------------------------------
