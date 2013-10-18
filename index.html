@@ -16,8 +16,10 @@ $(function () {
     'use strict';
 
     var carousel = new OOCarousel(document.getElementById('js-carousel'));
+    var carousel2 = new OOCarousel(document.getElementById('js-carousel-2'));
 
-    carousel.start().set({ fx: OOCarousel.FX.SLIDE_INFINITE, autoAdvance: true });
+    carousel.start().set({ fx: OOCarousel.FX.SLIDE_INFINITE, autoAdvance: false });
+    carousel2.start().set({ autoAdvance: false });
 
     $('.js-carousel-control').on('click', function (e) {
         var $target = $(e.currentTarget);
@@ -44,7 +46,8 @@ $(function () {
                 <li class="carousel-item js-oocarousel-item">
                     <div class="slide slide_2">
                         <div class="slide-inner">
-                            Two.
+                            Two.<br/>
+                            Lines.
                         </div>
                     </div>
                 </li>
@@ -70,6 +73,25 @@ $(function () {
                     </div>
                 </li>
             </ul>
+
+            <ul class="carousel" id="js-carousel-2">
+                <li class="carousel-item js-oocarousel-item">
+                    <img class="carousel-item-image" src="//placekitten.com/g/480/360" />
+                </li>
+                <li class="carousel-item js-oocarousel-item">
+                    <img class="carousel-item-image" src="//placekitten.com/480/360" />
+                </li>
+                <li class="carousel-item js-oocarousel-item">
+                    <img class="carousel-item-image" src="//placekitten.com/480/360" />
+                </li>
+                <li class="carousel-item js-oocarousel-item">
+                    <img class="carousel-item-image" src="//placekitten.com/480/360" />
+                </li>
+                <li class="carousel-item js-oocarousel-item">
+                    <img class="carousel-item-image" src="//placekitten.com/480/360" />
+                </li>
+            </ul>
+
 
             <div class="vr-small">
                 <ul class="blocks blocks_small">
