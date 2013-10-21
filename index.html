@@ -15,11 +15,9 @@
 $(function () {
     'use strict';
 
-    var carousel = new OOCarousel(document.getElementById('js-carousel'));
-    var carousel2 = new OOCarousel(document.getElementById('js-carousel-2'));
+    var carousel = new OOCarousel(document.getElementById('js-oocarousel'));
 
-    carousel.start().set({ fx: OOCarousel.FX.SLIDE_INFINITE, autoAdvance: false });
-    carousel2.start().set({ autoAdvance: false });
+    carousel.start().set({ fx: OOCarousel.FX.SLIDE, autoAdvance: false });
 
     $('.js-carousel-control').on('click', function (e) {
         var $target = $(e.currentTarget);
@@ -35,63 +33,25 @@ $(function () {
     <div class="wrap mix-isFullHeight">
         <div class="container">
 
-            <ul class="carousel" id="js-carousel">
-                <li class="carousel-item js-oocarousel-item">
-                    <div class="slide slide_1">
-                        <div class="slide-inner">
-                            One.
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item js-oocarousel-item">
-                    <div class="slide slide_2">
-                        <div class="slide-inner">
-                            Two.<br/>
-                            Lines.
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item js-oocarousel-item">
-                    <div class="slide slide_3">
-                        <div class="slide-inner">
-                            Three.
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item js-oocarousel-item">
-                    <div class="slide slide_4">
-                        <div class="slide-inner">
-                            Four.
-                        </div>
-                    </div>
-                </li>
-                <li class="carousel-item js-oocarousel-item">
-                    <div class="slide slide_5">
-                        <div class="slide-inner">
-                            Five.
-                        </div>
-                    </div>
-                </li>
-            </ul>
-
-            <ul class="carousel" id="js-carousel-2">
-                <li class="carousel-item js-oocarousel-item">
-                    <img class="carousel-item-image" src="//placekitten.com/g/480/360" />
-                </li>
-                <li class="carousel-item js-oocarousel-item">
-                    <img class="carousel-item-image" src="//placekitten.com/480/360" />
-                </li>
-                <li class="carousel-item js-oocarousel-item">
-                    <img class="carousel-item-image" src="//placekitten.com/480/360" />
-                </li>
-                <li class="carousel-item js-oocarousel-item">
-                    <img class="carousel-item-image" src="//placekitten.com/480/360" />
-                </li>
-                <li class="carousel-item js-oocarousel-item">
-                    <img class="carousel-item-image" src="//placekitten.com/480/360" />
-                </li>
-            </ul>
-
+            <div class="carousel" id="js-oocarousel">
+                <ul class="carousel-list js-oocarousel-list">
+                    <li class="carousel-item js-oocarousel-item">
+                        <img class="carousel-item-image" src="//placekitten.com/g/480/360" />
+                    </li>
+                    <li class="carousel-item js-oocarousel-item">
+                        <img class="carousel-item-image" src="//placekitten.com/480/360" />
+                    </li>
+                    <li class="carousel-item js-oocarousel-item">
+                        <img class="carousel-item-image" src="//placekitten.com/480/360" />
+                    </li>
+                    <li class="carousel-item js-oocarousel-item">
+                        <img class="carousel-item-image" src="//placekitten.com/480/360" />
+                    </li>
+                    <li class="carousel-item js-oocarousel-item">
+                        <img class="carousel-item-image" src="//placekitten.com/480/360" />
+                    </li>
+                </ul>
+            </div>
 
             <div class="vr-small">
                 <ul class="blocks blocks_small">
