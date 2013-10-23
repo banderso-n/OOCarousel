@@ -17,7 +17,7 @@ $(function () {
 
     var carousel = new OOCarousel(document.getElementById('js-oocarousel'));
 
-    carousel.start().set({ fx: OOCarousel.FX.SLIDE, autoAdvance: true, isCircular: false });
+    carousel.start();
 
     $('.js-carousel-control').on('click', function (e) {
         var $target = $(e.currentTarget);
@@ -39,21 +39,15 @@ $(function () {
                         <img class="carousel-item-image" src="//fillmurray.com/480/360" />
                     </li>
                     <li class="carousel-item js-oocarousel-item">
-                        <img class="carousel-item-image" src="//fillmurray.com/240/360" />
+                        <img class="carousel-item-image" src="//fillmurray.com/480/360" />
                     </li>
                     <li class="carousel-item js-oocarousel-item">
-                        <img class="carousel-item-image" src="//fillmurray.com/360/360" />
+                        <img class="carousel-item-image" src="//fillmurray.com/480/360" />
                     </li>
                     <li class="carousel-item js-oocarousel-item">
                         <img class="carousel-item-image" src="//fillmurray.com/g/480/360" />
                     </li>
-<!--                     <li class="carousel-item js-oocarousel-item">
-                        <img class="carousel-item-image" src="//placekitten.com/480/360" />
-                    </li>
-                    <li class="carousel-item js-oocarousel-item">
-                        <img class="carousel-item-image" src="//placekitten.com/480/360" />
-                    </li>
- -->                </ul>
+                </ul>
             </div>
 
             <div class="vr-small">
