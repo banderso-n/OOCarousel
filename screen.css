@@ -8,6 +8,8 @@ html, body {
 body {
     background: #cccccc;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* ---------------------------------------------------------------------
@@ -29,6 +31,7 @@ body {
 
 .container {
     padding: 20px;
+    max-width: 100%;
 }
 
 .blocks {
@@ -128,4 +131,11 @@ body {
 ------------------------------------------------------------------------ */
 .vr-small {
     margin: 10px 0;
+}
+
+.slider_cool .slider-content {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
 }
