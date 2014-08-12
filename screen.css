@@ -8,8 +8,6 @@ html, body {
 body {
     background: #cccccc;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 /* ---------------------------------------------------------------------
@@ -63,8 +61,7 @@ body {
     font-weight: bold;
     margin: 0;
     padding: 5px 10px;
-    -webkit-transition: margin-top 50ms ease-out, border-bottom-width 50ms ease-out;
-            transition: margin-top 50ms ease-out, border-bottom-width 50ms ease-out;
+    transition: margin-top 50ms ease-out, border-bottom-width 50ms ease-out;
 }
 
 .button:active {
@@ -72,59 +69,6 @@ body {
     border-bottom-width: 1px;
 }
 
-/**
- * A full-width, full-height module with vertically-centered large text
- */
-.slide {
-    display: table;
-    height: 100%;
-    width: 100%;
-}
-
-.slide-inner {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    font-weight: bold;
-    font-size: 36px;
-    color: #ffffff;
-}
-
-.slide_1 {
-    background: #cc5555;
-}
-
-.slide_2 {
-    background: #55cc55;
-}
-
-.slide_3 {
-    background: #5555cc;
-}
-
-.slide_4 {
-    background: #55cccc;
-}
-
-.slide_5 {
-    background: #cc55cc;
-}
-
-/* ---------------------------------------------------------------------
- CONTAINER STYLES
------------------------------------------------------------------------- */
-.carousel {
-    display: inline-block;
-    border: solid 1px red;
-}
-
-.carousel-item {
-    width: 100%;
-}
-
-.carousel-item-image {
-    width: 100%;
-}
 
 /* ---------------------------------------------------------------------
  VR (VERTICAL RHYTHM)
@@ -133,6 +77,10 @@ body {
     margin: 10px 0;
 }
 
+
+/* ---------------------------------------------------------------------
+ Slider extensions
+------------------------------------------------------------------------ */
 .slider_cool .slider-content {
     color: #ffffff;
     font-weight: bold;
