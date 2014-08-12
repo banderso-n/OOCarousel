@@ -1,70 +1,50 @@
 <!doctype html>
 <html>
-<head>
-    <title>OOCarousel - Test</title>
+    <head>
+        <title>OOSlider - Test</title>
 
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="screen.css" />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="screen.css" />
+        <link rel="stylesheet" href="ooslider.css" />
 
-    <script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="lib/jquery.transit.min.js"></script>
-    <script type="text/javascript" src="lib/OOCarousel.js"></script>
-    <script type="text/javascript">
+        <script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="lib/jquery.transit.min.js"></script>
+        
+        <script type="text/javascript" src="lib/OOSlider.js"></script>
+    </head>
+    <body>
 
+        <div class="wrap mix-isFullHeight">
+            <div class="container">
 
-$(function () {
-    'use strict';
+                <div class="slider" id="js-ooslider">
+                    <ul class="slider-list">
+                        <li class="slider-slide" style="background: red">
+                            <div class="slider-content">
+                                One.
+                            </div>
+                        </li>
+                        <li class="slider-slide" style="background: blue">
+                            <div class="slider-content">
+                                Two.
+                            </div>
+                        </li>
+                        <li class="slider-slide" style="background: firebrick">
+                            <div class="slider-content">
+                                Three.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
-    var carousel = new OOCarousel(document.getElementById('js-oocarousel'));
-
-    carousel.start();
-
-    $('.js-carousel-control').on('click', function (e) {
-        var $target = $(e.currentTarget);
-        var method = $target.data('carousel-method');
-        var args = $target.data('carousel-arguments');
-        carousel[method].apply(carousel, args);
-    });
-});
-    </script>
-</head>
-<body>
-
-    <div class="wrap mix-isFullHeight">
-        <div class="container">
-
-            <div class="carousel" id="js-oocarousel">
-                <ul class="carousel-list js-oocarousel-list">
-                    <li class="carousel-item js-oocarousel-item">
-                        <img class="carousel-item-image" src="//fillmurray.com/480/360" />
-                    </li>
-                    <li class="carousel-item js-oocarousel-item">
-                        <img class="carousel-item-image" src="//fillmurray.com/480/360" />
-                    </li>
-                    <li class="carousel-item js-oocarousel-item">
-                        <img class="carousel-item-image" src="//fillmurray.com/480/360" />
-                    </li>
-                    <li class="carousel-item js-oocarousel-item">
-                        <img class="carousel-item-image" src="//fillmurray.com/g/480/360" />
-                    </li>
-                </ul>
             </div>
-
-            <div class="vr-small">
-                <ul class="blocks blocks_small">
-                    <li><button class="js-carousel-control button" data-carousel-method="advance" data-carousel-arguments="[-1]">Previous</button></li>
-                    <li><button class="js-carousel-control button" data-carousel-method="advance" data-carousel-arguments="[1]">Next</button></li>
-                    <li><button class="js-carousel-control button" data-carousel-method="goTo" data-carousel-arguments="[0]">First Slide</button></li>
-                    <li><button class="js-carousel-control button" data-carousel-method="goTo" data-carousel-arguments="[1]">Second Slide</button></li>
-                    <li><button class="js-carousel-control button" data-carousel-method="goTo" data-carousel-arguments="[2]">Third Slide</button></li>
-                    <li><button class="js-carousel-control button" data-carousel-method="goTo" data-carousel-arguments="[3]">Fourth Slide</button></li>
-                    <li><button class="js-carousel-control button" data-carousel-method="goTo" data-carousel-arguments="[4]">Fifth Slide</button></li>
-                </ul>
-            </div>
-
-
         </div>
-    </div>
 
-</body>
+
+        <script type="text/javascript">
+            var sliderElement = document.getElementById('js-ooslider');
+            window.slider = new OOSlider(sliderElement);
+        </script>
+
+    </body>
 </html>
